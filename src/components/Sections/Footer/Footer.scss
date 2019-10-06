@@ -1,0 +1,35 @@
+@import 'assets/scss/variables/__breakpoints.scss';
+
+.Footer{
+    position: relative;
+    padding: 28px 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.363);
+
+    &__copyright{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        font-size: 15px;
+        letter-spacing: 1px;
+        font-weight: lighter;
+
+        img{
+            margin-left: 10px;
+            width: 130px;
+        }
+
+        a{
+            margin-bottom: -7px;
+        }
+
+        @media screen and (max-width: $bp-SM){
+            font-size: 12px;
+
+            img{
+                width: 80px;
+            }
+        }
+    }
+}
