@@ -6,19 +6,24 @@
     justify-content: center;
 
     &__brand{
-        color: $color-primary !important;
+        color: #fff !important;
         text-transform: uppercase;
         font-size: 15px;
         text-align: center;
         width: 280px;
         padding: 18px 45px;
-        // background-color: $color-primary;
+        background-color: $color-primary;
         box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.201);
         text-shadow: 1px 1px 20px rgba(0, 0, 0, 0.301);
         border-radius: 0 0 8px 8px;
         line-height: 1.1;
-        opacity: .9;
+        opacity: .96;
         font-weight: 300;
         margin: 0;
+        @include transition();
+
+        &:hover{
+            @include scale(1.04);
+        }
     }
 }

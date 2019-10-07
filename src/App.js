@@ -1,6 +1,7 @@
 import React, {Suspense} from 'react';
 import {BrowserRouter, Route} from 'react-router-dom';
 import {CSSTransition} from 'react-transition-group';
+import WOW from 'react-wow';
 
 import './App.scss';
 import 'assets/scss/util/__CSSTransitions.scss';
@@ -23,14 +24,12 @@ const App = () => {
             name: 'Home',
             Component: Home,
             exact: true
-        },
-        {
+        }, {
             path: '/passaros',
             name: 'ListaPassaros',
             Component: ListaPassaros,
             exact: false
-        },
-        {
+        }, {
             path: '/passaro',
             name: 'PerfilPassaro',
             Component: PerfilPassaro,
@@ -40,6 +39,7 @@ const App = () => {
 
     return (
         <BrowserRouter basename="/">
+
             <Layout>
                 {routes.map(({path, Component, name, exact}) => (
                     <Route key={name} exact={exact} path={path}>
@@ -50,7 +50,7 @@ const App = () => {
                                 classNames="CSSTransition--fade"
                                 unmountOnExit>
                                 <div className="page">
-                                    <Suspense fallback={< Spinner fullscreen/>}>
+                                    <Suspense fallback={< Spinner fullscreen />}>
                                         <Component/>
                                     </Suspense>
                                 </div>
@@ -59,6 +59,7 @@ const App = () => {
                     </Route>
                 ))}
             </Layout>
+
         </BrowserRouter>
     );
 }
