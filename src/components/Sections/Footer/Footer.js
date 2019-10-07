@@ -1,6 +1,7 @@
 import React from 'react';
 
 import './Footer.scss';
+import logoEvolve from 'assets/images/brands/evolve-white.png';
 
 const Footer = (props) => {
     return (
@@ -9,7 +10,7 @@ const Footer = (props) => {
                 <div className="Footer__copyright">
                     <span>powered with &lt;3 by</span>
                     <a href="https://evolveme.com.br" target="_blank" rel="noopener noreferrer">
-                        <img src="" alt="Logo Evolve Studio"/>
+                        <img src={logoEvolve} alt="Logo Evolve Studio"/>
                     </a>
                 </div>
             </div>
