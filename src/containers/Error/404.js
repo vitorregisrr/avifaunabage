@@ -2,7 +2,9 @@ import React from 'react';
 
 const Error404 = (props) => {
     return(
-        <section></section>
+        <section>
+            <div className="container"></div>
+        </section>
     )
 }
 

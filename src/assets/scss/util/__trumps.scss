@@ -1,8 +1,24 @@
 .section-wraper {
     padding: 50px 0;
     overflow: hidden;
+}
+
+.inner-title{
+    text-align: center;
+    color: #fff;
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.6px;
+    text-shadow: 1px 1px 15px rgba(0, 0, 0, 0.315);
     
-    
+    span{
+        display: block;
+        letter-spacing: 1.9px;
+        font-weight: 300;
+        font-size: 22px;
+        text-transform: lowercase;
+    }
 }
 
 .color-primary {

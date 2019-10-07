@@ -2,7 +2,11 @@ import React from 'react';
 
 const ListaPassaros = (props) => {
     return (
-        <section></section>
+        <section>
+            <div className="container">
+                
+            </div>
+        </section>
     )
 }
 
