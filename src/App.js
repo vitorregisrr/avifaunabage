@@ -25,7 +25,7 @@ const App = () => {
             Component: Home,
             exact: true
         }, {
-            path: '/passaros',
+            path: '/praca',
             name: 'ListaPassaros',
             Component: ListaPassaros,
             exact: false

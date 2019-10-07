@@ -1,0 +1,72 @@
+@import 'assets/scss/variables/__colors.scss';
+@import 'assets/scss/util/__animations.scss';
+
+.DragMap__item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    z-index: 2;
+    @include transition();
+    
+    &-label{
+        font-size: 9px;
+        color: $color-dark;
+        text-align: center;
+        text-transform: uppercase;
+        padding: 4px 17px;
+        max-width: 180px;
+        background-color: #fff;
+        box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.02);
+        text-align: center;
+        text-transform: uppercase;
+        border-radius: 8px;
+        border: 0.5px solid $color-dark;
+        border: 1.5px solid transparent;
+        @include transition();
+    }
+    
+    &-bullet{
+        position: relative;
+        width: 1.6px;
+        height: 20px;
+        background-color: #fff;
+        box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.02);
+        @include transition();
+        
+        &:after{
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+    }
+    
+
+    &:hover{
+        .DragMap__item-label{
+            @include scale(1.09);
+            color: #fff;
+            background-color: $color-primary;
+        }
+    }
+    
+    &.invertido{
+        .DragMap__item-label{
+            order: 2;
+        }
+
+        .DragMap__item-bullet{
+            &:after{
+                bottom: unset;
+                top: -6px;
+            }
+        }
+    }
+}

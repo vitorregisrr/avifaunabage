@@ -12,7 +12,7 @@
         text-align: center;
         width: 280px;
         padding: 18px 45px;
-        background-color: $color-primary;
+        background-color: transparentize($color-primary, .2);
         box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.201);
         text-shadow: 1px 1px 20px rgba(0, 0, 0, 0.301);
         border-radius: 0 0 8px 8px;

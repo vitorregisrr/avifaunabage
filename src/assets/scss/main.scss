@@ -23,10 +23,10 @@ body {
     background-image: url('../images/backgrounds//main-bg.png');
     background-size: cover;
     max-width: 100vw;
-    overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     background-attachment: fixed;
     -moz-osx-font-smoothing: grayscale;
+    overflow: hidden;
 }
 
 main{
