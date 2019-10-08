@@ -1,6 +1,7 @@
 const Passaros = [
     {
         apelido: 'Beija-flor-dourado',
+        codigo: 'beija-flor-dourado',
         nomeCientifico: 'Hylocharis chrysura (Shaw, 1812)',
         ordem: 'Apodiformes',
         familia: 'Trochilidae',
@@ -15,6 +16,7 @@ const Passaros = [
         pracas: ['pracas-dos-desportos']
     }, {
         apelido: 'Quero-quero',
+        codigo: 'quero-quero',
         nomeCientifico: 'Vanellus chilensis (Molina, 1782)',
         ordem: 'Charadriiformes',
         familia: 'Charadriidae',
@@ -31,6 +33,7 @@ const Passaros = [
         pracas: ['praca-da-estacao', 'praca-santos-dumont', 'praca-das-carretas', 'praca-dos-desportos', 'praca-dr-albano']
     }, {
         apelido: 'Pombo-doméstico',
+        codigo: 'pombo-domestico',
         nomeCientifico: 'Columba livia Gmelin, 1789',
         ordem: 'Columbiformes',
         familia: 'Columbidae',
@@ -53,6 +56,7 @@ const Passaros = [
         ]
     }, {
         apelido: 'Rolinha-picui',
+        codigo: 'rolinha-picui',
         nomeCientifico: 'Columbina picui (Temminck, 1813)',
         ordem: 'Columbiformes',
         familia: 'Columbidae',
@@ -73,6 +77,7 @@ const Passaros = [
         pracas: ['praca-das-carretas', 'praca-dom-diogo', 'praca-da-catedral', 'praca-dr-albano', 'praca-do-silveira']
     }, {
         apelido: 'Pomba-do-orvalho',
+        codigo: 'pomba-do-orvalho',
         nomeCientifico: 'Patagioenas maculosa (Temminck, 1813)',
         ordem: 'Columbiformes',
         familia: 'Columbidae',
@@ -92,6 +97,7 @@ const Passaros = [
         ]
     }, {
         apelido: 'Avoante',
+        codigo: 'avoante',
         nomeCientifico: 'Zenaida auriculata (Des Murs, 1847)',
         ordem: 'Columbiformes',
         familia: 'Columbidae',
@@ -122,6 +128,7 @@ const Passaros = [
         ]
     }, {
         apelido: 'Rabo-de-palha',
+        codigo: 'rabo-de-palha',
         nomeCientifico: 'Guira guira (Gmelin, 1788)',
         ordem: 'Cuculiformes',
         familia: 'Cuculidae',
@@ -144,6 +151,7 @@ const Passaros = [
         (Desportos) e Santos Dumont (Santa Tecla).`
     }, {
         apelido: 'Quiriquiri',
+        codigo: 'quiriquiri',
         nomeCientifico: 'Falco sparverius Linnaeus, 1758',
         ordem: 'Falconiformes',
         familia: 'Falconidae',
@@ -163,6 +171,7 @@ const Passaros = [
         pracas: ['praca-dom-diogo']
     }, {
         apelido: 'Jacu',
+        codigo: 'jacu',
         nomeCientifico: 'Penelope obscura Temminck, 1815',
         ordem: 'Galliformes',
         familia: 'Cracidae',
@@ -182,6 +191,7 @@ const Passaros = [
         pracas: ['praca-dom-diogo']
     }, {
         apelido: 'Sanhaçu-de-fogo',
+        codigo: 'sanhacu-de-fogo',
         nomeCientifico: 'Piranga flava (Vieillot, 1822)',
         ordem: 'Passeriformes',
         familia: 'Cardinalidae',
@@ -204,6 +214,7 @@ const Passaros = [
         pracas: ['praca-dr-albano', 'praca-da-estacao']
     }, {
         apelido: 'João-de-barro',
+        codigo: 'joao-de-barro',
         nomeCientifico: 'Furnarius rufus (Gmelin, 1788)',
         ordem: 'Passeriformes',
         familia: 'Furnariidae',
@@ -229,6 +240,7 @@ const Passaros = [
         ]
     }, {
         apelido: 'Andorinha-do-campo',
+        codigo: 'andorinha-do-campo',
         nomeCientifico: 'Progne tapera (Vieillot, 1817)',
         ordem: 'Passeriformes',
         familia: 'Hirundinidae',
@@ -241,6 +253,7 @@ const Passaros = [
         pracas: ['praca-santos-dumont']
     }, {
         apelido: 'Chupim',
+        codigo: 'chupim',
         nomeCientifico: 'Molothrus bonariensis (Gmelin, 1789)',
         ordem: 'Passeriformes',
         familia: 'Icteridae',
@@ -272,6 +285,7 @@ const Passaros = [
         Rodoviária) e Bandeiras (Calçadão).`
     }, {
         apelido: 'Chupim-azeviche',
+        codigo: 'chupim-azeviche',
         nomeCientifico: 'Molothrus rufoaxillaris Cassin, 1866',
         ordem: 'Passeriformes',
         familia: 'Icteridae',
@@ -288,6 +302,7 @@ const Passaros = [
         (Coreto).`
     }, {
         apelido: 'Mariquita',
+        codigo: 'mariquita',
         nomeCientifico: 'Setophaga pitiayumi (Vieillot, 1817)',
         ordem: 'Passeriformes',
         familia: 'Parulidae',
@@ -307,6 +322,7 @@ const Passaros = [
         pracas: ['praca-santos-dumont', 'praca-da-catedral', 'praca-da-estacao', 'praca-do-calcadao']
     }, {
         apelido: 'Tico-tico',
+        codigo: 'tico-tico',
         nomeCientifico: 'Zonotrichia capensis (Statius Muller, 1776)',
         ordem: 'Passeriformes',
         familia: 'Passerellidae',
@@ -332,6 +348,7 @@ const Passaros = [
         pracas: ['praca-das-carretas', 'praca-dr-albano', 'praca-do-silveira', 'praca-do-coreto', 'praca-dom-diogo']
     }, {
         apelido: 'Pardal',
+        codigo: 'pardal',
         nomeCientifico: 'Passer domesticus (Linnaeus, 1758)',
         ordem: 'Passeriformes',
         familia: 'Passeridae',
@@ -360,6 +377,7 @@ const Passaros = [
         ]
     }, {
         apelido: 'Sanhaço-papo-laranja',
+        codigo: 'sanhaco-papo-laranja',
         nomeCientifico: 'Pipraeidea bonariensis (Gmelin, 1789)',
         ordem: 'Passeriformes',
         familia: 'Thraupidae',
@@ -384,6 +402,7 @@ const Passaros = [
         ]
     }, {
         apelido: 'Canário-da-terra',
+        codigo: 'canario-da-terra',
         nomeCientifico: 'Sicalis flaveola (Linnaeus, 1766)',
         ordem: 'Passeriformes',
         familia: 'Thraupidae',
@@ -411,6 +430,7 @@ const Passaros = [
         ]
     }, {
         apelido: 'Sanhaço-cinzento',
+        codigo: 'sanhacu-cinzento', 
         nomeCientifico: 'Tangara sayaca (Linnaeus, 1766)',
         ordem: 'Passeriformes',
         familia: 'Thraupidae',
@@ -440,6 +460,7 @@ const Passaros = [
         ]
     }, {
         apelido: 'Sabiá-poca',
+        codigo: 'sabia-poca',
         nomeCientifico: 'Turdus amaurochalinus Cabanis, 1850',
         ordem: 'Passeriformes',
         familia: 'Turdidae',
@@ -459,6 +480,7 @@ const Passaros = [
         ]
     }, {
         apelido: 'Sabiá-laranjeira',
+        codigo: 'sabia-laranjeira',
         nomeCientifico: 'Turdus rufiventris Vieillot, 1818',
         ordem: 'Passeriformes',
         familia: 'Turdidae',
@@ -489,6 +511,7 @@ const Passaros = [
         ]
     }, {
         apelido: 'Suiriri-cavaleiro',
+        codigo: 'suiriri-cavaleiro',
         nomeCientifico: 'Machetornis rixosa (Vieillot, 1819)',
         ordem: 'Passeriformes',
         familia: 'Tyrannidae',
@@ -513,6 +536,7 @@ const Passaros = [
         ]
     }, {
         apelido: 'Bem-te-vi',
+        codigo: 'bem-te-vi',
         nomeCientifico: 'Pitangus sulphuratus (Linnaeus, 1766)',
         ordem: 'Passeriformes',
         familia: 'Tyrannidae',
@@ -543,6 +567,7 @@ const Passaros = [
         ]
     }, {
         apelido: 'Suiriri',
+        codigo: 'suiriri',
         nomeCientifico: 'Tyrannus melancholicus Vieillot, 1819',
         ordem: 'Passeriformes',
         familia: 'Tyrannidae',
@@ -573,6 +598,7 @@ const Passaros = [
         ]
     }, {
         apelido: 'Tesourinha',
+        codigo: 'tesourinha',
         nomeCientifico: 'Tyrannus savana Daudin, 1802',
         ordem: 'Passeriformes',
         familia: 'Tyrannidae',
@@ -594,6 +620,7 @@ const Passaros = [
         ]
     }, {
         apelido: 'Curicaca',
+        codigo: 'curicaca',
         nomeCientifico: 'Theristicus caudatus (Boddaert, 1783)',
         ordem: 'Pelecaniformes',
         familia: 'Threskiornithidae',
@@ -619,6 +646,7 @@ const Passaros = [
         ]
     }, {
         apelido: 'Pica-pau-do-campo',
+        codigo: 'pica-pau-do-campo',
         nomeCientifico: 'Colaptes campestris (Vieillot, 1818)',
         ordem: 'Piciformes',
         familia: 'Picidae',
@@ -638,6 +666,7 @@ const Passaros = [
         ]
     }, {
         apelido: 'Pica-pau-verde-barrado',
+        codigo: 'pica-pau-verde-barrado',
         nomeCientifico: 'Colaptes melanochloros (Gmelin, 1788)',
         ordem: 'Piciformes',
         familia: 'Picidae',
@@ -659,6 +688,7 @@ const Passaros = [
         ]
     }, {
         apelido: 'Picapauzinho-verde-carijó',
+        codigo: 'picapauzinho-verde-carijo',
         nomeCientifico: 'Veniliornis spilogaster (Wagler, 1827)',
         ordem: 'Piciformes',
         familia: 'Picidae',
@@ -676,6 +706,7 @@ const Passaros = [
         ]
     }, {
         apelido: 'Caturrita',
+        codigo: 'caturrita',
         nomeCientifico: 'Myiopsitta monachus (Boddaert, 1783)',
         ordem: 'Psittaciformes',
         familia: 'Psittacidae',

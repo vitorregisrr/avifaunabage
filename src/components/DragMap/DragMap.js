@@ -11,7 +11,7 @@ const DragMap = props => {
     const mapPoints = [
         {
             label: 'Praça da Estação',
-            key: 'praca-estacao',
+            key: 'praca-da-estacao',
             pos:{
                 x: 390,
                 y: 290
@@ -30,7 +30,7 @@ const DragMap = props => {
 
         {
             label: 'Praça as Carretas',
-            key: 'praca-das-corretas',
+            key: 'praca-das-carretas',
             pos:{
                 x: 310,
                 y: 460
@@ -65,8 +65,8 @@ const DragMap = props => {
         },
 
         {
-            label: 'Praça Dom Diego de Souza',
-            key: 'praca-dom-diego',
+            label: 'Praça Dom Diogo de Souza',
+            key: 'praca-dom-diogo',
             pos:{
                 x: 500,
                 y: 200

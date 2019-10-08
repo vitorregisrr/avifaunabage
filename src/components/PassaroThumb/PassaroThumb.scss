@@ -1,0 +1,73 @@
+@import 'assets/scss/variables/__colors.scss';
+@import 'assets/scss/util/__animations.scss';
+
+.PassaroThumb{
+    background-color: rgba(255, 255, 255, 0.93);
+    border-radius: 5px;
+    width: 100%;
+    height: 290px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 15px;
+    margin-bottom: 25px;
+
+    &__img{
+        border-radius: 15px 15px 0 0;
+        overflow: hidden;
+        width: 100%;
+        height: 55%;
+        box-shadow: 1px 1px 10px rgba(102, 71, 71, 0.25);
+
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            @include transition();
+        }
+    }
+
+    &__caption{
+        padding: 8px 0 14px 20px;
+        display: flex;
+        flex-direction: column;
+        height: 45%;
+    }
+
+    &__apelido{
+        display: flex;
+        flex-direction: column;
+        font-weight: 900px;
+        color: $color-dark;
+        border-bottom: 2px solid $color-dark;
+        margin: 10px 0 5px 0;
+        font-size: 19px;
+    }
+
+    &__nome-cientifico{
+        color: $color-gray;
+        font-weight: 300;
+        font-size: 12px;
+        margin-bottom: 20px;
+        padding-right: 15px;
+    }
+
+    &__more{
+        width: 100%;
+        font-size: 12px;
+        padding-right: 20px;
+        text-align: right;
+        color: $color-dark;
+        margin-top: auto;
+        @include transition();
+
+        &:hover{
+            @include scale(1.03);
+        }
+    }
+
+    &:hover{
+        img{
+            @include scale(1.1);
+        }
+    }
+}

@@ -1,25 +1,40 @@
 import React, {useEffect} from 'react';
+import WOW from 'react-wow';
 import {withRouter} from 'react-router-dom';
 import qs from 'query-string';
+import translatePraca from 'util/pracaTranslator';
+
 import passaros from './PassarosData.js'
 import PassaroThumb from 'components/PassaroThumb/PassaroThumb.js';
+import PageHeader from 'components/PageHeader/PageHeader.js';
 
 const ListaPassaros = (props) => {
-    
-    useEffect( () => {
-        const filter = qs.parse(this.props.location.search, { ignoreQueryPrefix: true }).praca;
-        alert(filter);
-    }, []);
+    const pracaCod = qs
+        .parse(props.location.search, {ignoreQueryPrefix: true})
+        .key;
+
+    const pracaNome = translatePraca(pracaCod);
 
     return (
-        <section>
-            <div className="container">
-                <div className="row">
-                     {passaros.filter(passaro => passaro.pracas.includes('')).map( passaro => 
-                        <PassaroThumb {...passaro}></PassaroThumb>
-                     )}
+        <section className="mb-5 mt-1 py-3">
+            <WOW animation="zoomIn">
+                <PageHeader hasBack={true}>
+                    <h2 className="inner-title">
+                        <span>aves presenta na</span>
+                        {pracaNome}
+                    </h2>
+                </PageHeader>
+
+                <div className="container">
+                    <div className="row">
+                        {passaros
+                            .filter(passaro => passaro.pracas.includes(pracaCod))
+                            .map(passaro => <div key={passaro.codigo} className="col-sm-6 col-lg-4 col-xl-3 h-100">
+                                <PassaroThumb {...passaro}></PassaroThumb>
+                            </div>)}
+                    </div>
                 </div>
-            </div>
+            </WOW>
         </section>
     )
 }

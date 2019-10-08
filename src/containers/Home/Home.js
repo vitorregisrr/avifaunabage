@@ -2,20 +2,23 @@ import React from 'react';
 import DragMap from 'components/DragMap/DragMap';
 import WOW from 'react-wow';
 
-const Home = (props) => {
+import PageHeader from 'components/PageHeader/PageHeader';
+
+const Home = props => {
     return (
-        <section>
-            <div className="container mb-5 mt-1 py-3 d-flex flex-column align-items-center">
-                <div className="pt-4 pb-1">
-                    <WOW animation="fadeInUp">
+        <section className="mb-5 mt-1 py-3">
+            <WOW animation="fadeIn">
+                <PageHeader>
                     <h2 className="inner-title">
                         Selecione uma praça
                         <span>E descubra suas aves.</span>
                     </h2>
-                    </WOW>
+                </PageHeader>
+
+                <div className="container d-flex flex-column align-items-center">
+                    <DragMap></DragMap>
                 </div>
-                <DragMap></DragMap>
-            </div>
+            </WOW>
         </section>
     )
 }
