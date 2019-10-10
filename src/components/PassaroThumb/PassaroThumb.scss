@@ -1,23 +1,26 @@
 @import 'assets/scss/variables/__colors.scss';
 @import 'assets/scss/util/__animations.scss';
 
-.PassaroThumb{
+.PassaroThumb {
+    position: relative;
     background-color: rgba(255, 255, 255, 0.93);
     border-radius: 5px;
     width: 100%;
-    height: 290px;
-    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.15);
+    height: 260px;
+    box-shadow: 1px 1px 10px #00000026;
     border-radius: 15px;
     margin-bottom: 25px;
+    overflow: hidden;
+    @include transition();
 
-    &__img{
-        border-radius: 15px 15px 0 0;
+    &__img {
+        border-radius: 15px;
         overflow: hidden;
         width: 100%;
-        height: 55%;
+        height: 100%;
         box-shadow: 1px 1px 10px rgba(102, 71, 71, 0.25);
 
-        img{
+        img {
             width: 100%;
             height: 100%;
             object-fit: cover;
@@ -26,24 +29,31 @@
         }
     }
 
-    &__caption{
+    &__caption {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(255, 255, 255, 0.826);
         padding: 8px 0 14px 20px;
         display: flex;
         flex-direction: column;
-        height: 45%;
+        border-radius: 0 0 15px 15px;
+        margin-bottom: -20px;
+        @include transition();
     }
 
-    &__apelido{
+    &__apelido {
         display: flex;
         flex-direction: column;
         font-weight: 900px;
         color: $color-dark;
-        border-bottom: 2px solid $color-dark;
-        margin: 10px 0 5px 0;
+        margin: 10px 0 5px;
         font-size: 19px;
     }
 
-    &__nome-cientifico{
+    &__nome-cientifico {
         color: $color-gray;
         font-weight: 300;
         font-size: 12px;
@@ -51,7 +61,9 @@
         padding-right: 15px;
     }
 
-    &__more{
+    &__more {
+        visibility: hidden;
+        opacity: 0;
         width: 100%;
         font-size: 12px;
         padding-right: 20px;
@@ -59,15 +71,22 @@
         color: $color-dark;
         margin-top: auto;
         @include transition();
-
-        &:hover{
+        &:hover {
             @include scale(1.03);
         }
     }
-
-    &:hover{
-        img{
+    &:hover {
+        img {
             @include scale(1.1);
+        }
+
+        .PassaroThumb__caption{
+            margin-bottom: 0;
+        }
+
+        .PassaroThumb__more {
+            opacity: 1;
+            visibility: visible;
         }
     }
 }
