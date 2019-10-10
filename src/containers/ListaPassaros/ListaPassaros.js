@@ -1,14 +1,19 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import WOW from 'react-wow';
 import {withRouter} from 'react-router-dom';
 import qs from 'query-string';
 import translatePraca from 'util/pracaTranslator';
 import passarosData from 'util/PassarosData.js'
+import {animateScroll} from 'react-scroll';
 
 import PassaroThumb from 'components/PassaroThumb/PassaroThumb.js';
 import PageHeader from 'components/PageHeader/PageHeader.js';
 
 const ListaPassaros = (props) => {
+    useEffect( () => { 
+        animateScroll.scrollToTop();
+    } , []);
+
     const pracaCod = qs
         .parse(props.location.search, {ignoreQueryPrefix: true})
         .key;

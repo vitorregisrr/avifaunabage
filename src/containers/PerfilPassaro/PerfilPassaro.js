@@ -1,15 +1,20 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import WOW from 'react-wow';
 import {withRouter, Redirect} from 'react-router-dom';
 import qs from 'query-string';
 import {Scrollbars} from 'react-custom-scrollbars';
 import passarosData from '../../util/PassarosData.js'
 import pracasTranslator from '../../util/pracaTranslator.js'
+import {animateScroll} from 'react-scroll';
 
 import './PerfilPassaro.scss';
 import PageHeader from 'components/PageHeader/PageHeader.js';
 
 const PerfilPassaro = (props) => {
+    useEffect( () => { 
+        animateScroll.scrollToTop();
+    } , []);
+    
     const passaroKey = qs
         .parse(props.location.search, {ignoreQueryPrefix: true})
         .key;
