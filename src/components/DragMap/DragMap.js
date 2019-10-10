@@ -13,8 +13,8 @@ const DragMap = props => {
             label: 'Praça da Estação',
             key: 'praca-da-estacao',
             pos:{
-                x: 390,
-                y: 290
+                x: 450,
+                y: 300
             }
         },
 
@@ -22,18 +22,17 @@ const DragMap = props => {
             label: 'Praça do Coreto',
             key: 'praca-do-coreto',
             pos:{
-                x: 366,
-                y: 395
-            },
-            classNames: 'invertido'
+                x: 416,
+                y: 365
+            }
         },
 
         {
             label: 'Praça as Carretas',
             key: 'praca-das-carretas',
             pos:{
-                x: 310,
-                y: 460
+                x: 270,
+                y: 400
             }
         },
 
@@ -41,9 +40,10 @@ const DragMap = props => {
             label: 'Praça Dr.Albano',
             key: 'praca-dr-albano',
             pos:{
-                x: 130,
-                y: 140
-            }
+                x: 510,
+                y: 425
+            },
+            classNames: 'invertido'
         },
 
         {
@@ -60,7 +60,7 @@ const DragMap = props => {
             key: 'praca-santos-dumont',
             pos:{
                 x: 540,
-                y: 300
+                y: 200
             }
         },
 
@@ -68,8 +68,8 @@ const DragMap = props => {
             label: 'Praça Dom Diogo de Souza',
             key: 'praca-dom-diogo',
             pos:{
-                x: 500,
-                y: 200
+                x: 400,
+                y: 539
             }
         },
 
@@ -77,9 +77,10 @@ const DragMap = props => {
             label: 'Praça da Catedral',
             key: 'praca-da-catedral',
             pos:{
-                x: 200,
-                y: 240
-            }
+                x: 400,
+                y: 480
+            },
+            classNames: 'invertido'
         },
 
         {
@@ -95,8 +96,8 @@ const DragMap = props => {
             label: 'Praça Do Silveira',
             key: 'praca-do-silveira',
             pos:{
-                x: 310,
-                y: 200
+                x: 420,
+                y: 410
             }
         },
     ]
@@ -113,7 +114,7 @@ const DragMap = props => {
             onUpdate: (data) => {
                 content.style.transform = `translate(
               ${ - data.position.x}px,
-              ${ - data.position.y}px
+              ${ - data.position.y - 40}px
             )`
             }
         })
@@ -135,6 +136,7 @@ const DragMap = props => {
     return (
         <WOW animation="zoomIn">
             <div className="DragMap">
+                <span class="DragMap__warning">Os pontos são aproximados e podem não condizer com a localidade real.</span>
                 <div className="DragMap__content">
                     <img className="DragMap__scene" src={mapaBackground} alt="Mapa de Bagé"/>
                     {mapPoints.map( point => 

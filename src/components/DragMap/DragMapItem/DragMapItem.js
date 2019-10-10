@@ -6,7 +6,7 @@ import './DragMapItem.scss';
 
 const DragMapItem = props => {
     return (
-        <WOW animation="fadeInUp">
+        <WOW animation="fadeInUp" offset={100}>
             <Link
                 to={`/praca?key=${props.cod}`}
                 className={`DragMap__item ${props.classNames}`}
