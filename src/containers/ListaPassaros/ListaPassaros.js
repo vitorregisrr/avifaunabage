@@ -1,10 +1,10 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import WOW from 'react-wow';
 import {withRouter} from 'react-router-dom';
 import qs from 'query-string';
 import translatePraca from 'util/pracaTranslator';
 
-import passaros from './PassarosData.js'
+import passaros from '../../util/PassarosData.js'
 import PassaroThumb from 'components/PassaroThumb/PassaroThumb.js';
 import PageHeader from 'components/PageHeader/PageHeader.js';
 
