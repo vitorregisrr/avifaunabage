@@ -3,8 +3,8 @@ import WOW from 'react-wow';
 import {withRouter} from 'react-router-dom';
 import qs from 'query-string';
 import translatePraca from 'util/pracaTranslator';
+import passarosData from 'util/PassarosData.js'
 
-import passaros from '../../util/PassarosData.js'
 import PassaroThumb from 'components/PassaroThumb/PassaroThumb.js';
 import PageHeader from 'components/PageHeader/PageHeader.js';
 
@@ -14,8 +14,6 @@ const ListaPassaros = (props) => {
         .key;
 
     const pracaNome = translatePraca(pracaCod);
-
-    console.log(pracaCod)
 
     return (
         <section className="mb-5 mt-1 py-3">
@@ -29,7 +27,7 @@ const ListaPassaros = (props) => {
 
                 <div className="container">
                     <div className="row">
-                        {passaros
+                        {passarosData
                             .filter(passaro => passaro.pracas.includes(pracaCod))
                             .map(passaro => <div key={passaro.codigo} className="col-sm-6 col-lg-4 col-xl-3 h-100">
                                 <PassaroThumb {...passaro}></PassaroThumb>

@@ -30,8 +30,7 @@ const PerfilPassaro = (props) => {
                                 </div>
 
                                 <div className="PerfilPassaro__caption">
-                                    <button className="PerfilPassaro__play">
-                                    </button>
+                                    <button className="PerfilPassaro__play"></button>
 
                                     <h1 className="PerfilPassaro__apelido">
                                         {passaro.apelido}
@@ -60,10 +59,17 @@ const PerfilPassaro = (props) => {
                                     }}>
 
                                         <div className="PerfilPassaro__content">
-
-                                            <div className="PerfilPassaro__grau-seguranca lc"></div>
-
                                             <div className="row">
+                                                <div className="col-12 mb-3">
+                                                    <h5 className="title d-block">
+                                                        Grau de segurança:
+                                                    </h5>
+                                                    <img
+                                                        className="PerfilPassaro__grau-seguranca"
+                                                        src={require(`assets/images/ico/grafico-extincao.png`)}
+                                                        alt={`Gráfico de nível de extinção`}
+                                                        title="Pouco preocupante"/>
+                                                </div>
                                                 <div className="col-6 mb-3">
                                                     <h5 className="title">
                                                         Ordem:
@@ -102,9 +108,7 @@ const PerfilPassaro = (props) => {
                                                     </h5>
                                                     {passaro
                                                         .pracas
-                                                        .map((praca, i) => 
-                                                            <span>{pracasTranslator(praca)}
-                                                            {i !== passaro.pracas.length -1
+                                                        .map((praca, i) => <span>{pracasTranslator(praca)} {i !== passaro.pracas.length - 1
                                                                 ? ', '
                                                                 : '.'}
                                                         </span>)}
@@ -115,7 +119,7 @@ const PerfilPassaro = (props) => {
                                 </div>
                             </div>
                         </div>
-                    : ''}
+                    : <Redirect to="/"></Redirect>}
             </WOW>
         </section>
     )
