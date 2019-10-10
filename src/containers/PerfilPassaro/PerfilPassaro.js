@@ -115,7 +115,7 @@ const PerfilPassaro = (props) => {
                                 </div>
                             </div>
                         </div>
-                    : <Redirect to="/"/>}
+                    : ''}
             </WOW>
         </section>
     )

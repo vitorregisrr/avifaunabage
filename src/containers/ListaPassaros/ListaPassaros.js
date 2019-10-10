@@ -15,6 +15,8 @@ const ListaPassaros = (props) => {
 
     const pracaNome = translatePraca(pracaCod);
 
+    console.log(pracaCod)
+
     return (
         <section className="mb-5 mt-1 py-3">
             <WOW animation="zoomIn">
