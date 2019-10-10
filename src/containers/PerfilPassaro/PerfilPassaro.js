@@ -108,7 +108,7 @@ const PerfilPassaro = (props) => {
                                                     </h5>
                                                     {passaro
                                                         .pracas
-                                                        .map((praca, i) => <span>{pracasTranslator(praca)} {i !== passaro.pracas.length - 1
+                                                        .map((praca, i) => <span>{pracasTranslator(praca)}{i !== passaro.pracas.length - 1
                                                                 ? ', '
                                                                 : '.'}
                                                         </span>)}
