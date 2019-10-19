@@ -1,72 +1,110 @@
 @import 'assets/scss/variables/__colors.scss';
 @import 'assets/scss/util/__animations.scss';
 
-.DragMap__item{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.DragMap__item {
+    cursor: pointer;
     position: absolute;
-    z-index: 2;
+    z-index: 4;
+    animation: float 4s infinite;
     @include transition();
-    
-    &-label{
-        font-size: 10px;
-        color: #fff;
-        text-align: center;
-        text-transform: uppercase;
-        padding: 4px 17px;
-        max-width: 160px;
-        background-color: darken($color-primary, 4);
-        box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.1);
-        text-align: center;
-        text-transform: uppercase;
-        border-radius: 8px;
-        border: 0.5px solid darken($color-primary, 4);
-        border: 1.5px solid transparent;
-        @include transition();
-    }
-    
-    &-bullet{
+
+    &-icon {
         position: relative;
-        width: 1.6px;
-        height: 20px;
-        background-color: darken($color-primary, 4);
-        box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.02);
-        @include transition();
-        
-        &:after{
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        background-color: $color-primary;
+
+        &:before {
             content: '';
             position: absolute;
-            bottom: -6px;
+            top: 60%;
             left: 50%;
-            transform: translateX(-50%);
-            width: 9px;
-            height: 9px;
-            border-radius: 50%;
-            box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.1);
-            background-color: darken($color-primary, 4);
-        }
-    }
-    
-
-    &:hover{
-        .DragMap__item-label{
-            @include scale(1.09);
-            color: #fff;
-            background-color: darken($color-primary, 4);
-        }
-    }
-    
-    &.invertido{
-        .DragMap__item-label{
-            order: 2;
+            z-index: -1;
+            transform: translate(-50%, -50%);
+            width: 45px;
+            height: 70px;
+            background-image: url('../../../assets/images/ico/praca-icon-bg.png');
+            background-size: contain;
+            background-position: center center;
+            background-repeat: no-repeat;
+            pointer-events: none;
         }
 
-        .DragMap__item-bullet{
-            &:after{
-                bottom: unset;
-                top: -6px;
-            }
+        &:after {
+            content: '';
+            position: absolute;
+            z-index: 3;
+            width: 100%;
+            height: 100%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: 50%;
+            background-image: url('../../../assets/images/ico/praca.png');
+        }
+    }
+
+    &-box {
+        position: absolute;
+        right: 30px;
+        top: 4px;
+        border-radius: 0 60px 60px 0;
+        transform: translateX(100%);
+        background-color: $color-primary;
+        padding: 9px 0;
+        opacity: 0;
+        max-width: 1px;
+        overflow: hidden;
+        transition: max-width 1s ease-in-out, opacity 0.2s ease-in, padding 0.7s;
+        color: #fff;
+        font-size: 10px;
+        white-space: nowrap;
+        text-transform: uppercase;
+
+        span {
+            display: block;
+            font-size: 21px;
+            font-weight: 900;
+            margin-top: -3px;
+            text-transform: none;
+        }
+    }
+
+    &:hover, &.active{
+        @include scale(1.05);
+
+        .DragMap__item-box {
+            padding: 7px 25px 7px 40px;
+            opacity: 1;
+            max-width: 1000px;
+        }
+    }
+
+    &-more{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        left: 52px;
+        bottom: -14px;
+        background-color: $color-secondary;
+        color: #fff;
+        height: 20px;  
+        opacity: 0;
+        padding: 0px 15px;
+        width: 80px; 
+        border-radius: 0 0 15px 15px;
+        font-size: 8px;
+        z-index: 10;
+        @include transition();
+    }
+
+    &.active{
+        .DragMap__item-more{
+            opacity: 1;
         }
     }
 }
