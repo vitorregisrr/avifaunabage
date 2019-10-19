@@ -99,12 +99,14 @@
         border-radius: 0 0 15px 15px;
         font-size: 8px;
         z-index: 10;
+        pointer-events: none;
         @include transition();
     }
 
     &.active{
         .DragMap__item-more{
             opacity: 1;
+            pointer-events: all;
         }
     }
 }
