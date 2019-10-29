@@ -134,6 +134,16 @@
                 transform: translateY(-50%) scale(1.1);
             }
         }
+
+        &.is-playing{
+            &:after{
+                width: 30px;
+                height: 30px;
+                left: 50%;
+                background-image: url(../../assets/images/ico/audio-playing.gif);
+                animation: fadeIn 0.7s;
+            }
+        }
     }
 
     &__grau-seguranca{

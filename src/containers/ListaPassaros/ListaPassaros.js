@@ -17,7 +17,7 @@ const ListaPassaros = (props) => {
     const pracaCod = qs
         .parse(props.location.search, {ignoreQueryPrefix: true})
         .key;
-
+        
     const pracaNome = translatePraca(pracaCod);
 
     return (

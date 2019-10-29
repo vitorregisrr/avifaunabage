@@ -11,6 +11,7 @@ const PageHeader = props => {
 
         setTimeout(() => animateScroll.scrollToTop(), 100)
     }
+    
     return (
         <WOW animation="fadeInUp">
             <div className="PageHeader pt-4 pb-1">

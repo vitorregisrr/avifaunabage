@@ -1,4 +1,4 @@
-const translatePraca = cod => {
+const pracasTranslator = cod => {
     switch(cod){
         case 'praca-da-estacao':
             return 'Praça da estação';
@@ -32,4 +32,4 @@ const translatePraca = cod => {
     }
 }
 
-export default translatePraca;
+export default pracasTranslator;
