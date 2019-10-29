@@ -2,7 +2,9 @@ import React from 'react';
 import { Scrollbars } from 'react-custom-scrollbars';
 import pracasTranslator from 'util/pracaTranslator';
 
-import AudioPlayButton from 'components/AudioPlayButton/AudioPlayButton';
+import AudioButton from 'components/AudioButton/AudioButton';
+import SpeechButton from 'components/SpeechButton/SpeechButton';
+import LibrasButton from 'components/LibrasButton/LibrasButton';
 
 const PassaroCaption = props => {
     return (
@@ -13,8 +15,21 @@ const PassaroCaption = props => {
                     alt={`Passáro ${props.passaro.nome}`}/>
             </div>
             <div className="PerfilPassaro__caption">
-                <AudioPlayButton classNames="PerfilPassaro__play" src={`${props.passaro.codigo}.mp3`}></AudioPlayButton>
-
+                <AudioButton classNames="PerfilPassaro__play" src={`${props.passaro.codigo}.mp3`}></AudioButton>
+                <div className="PerfilPassaro__acessb">
+                    <LibrasButton className="PerfilPassaro__acessb-item libras" codigo={props.passaro.codigo}></LibrasButton>
+                    <SpeechButton classNames="PerfilPassaro__acessb-item locucao" 
+                    text={`
+                        Apelido: ${props.passaro.apelido}. 
+                        Nome Científico: ${props.passaro.nomeCientifico}. 
+                        Grau de segurança: Pouco Preocupante.
+                        Ordem: ${props.passaro.ordem}.
+                        Familía: ${props.passaro.familia}.
+                        Habitat: ${props.passaro.habitat}.
+                        Alimentação: ${props.passaro.alimentacao}.
+                        Aparência: ${props.passaro.aparencia}`}></SpeechButton>
+                </div>
+                
                 <h1 className="PerfilPassaro__apelido">
                     {props.passaro.apelido}
                 </h1>

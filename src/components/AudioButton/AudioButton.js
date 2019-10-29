@@ -1,6 +1,6 @@
 import React, {useRef, useState, useEffect} from 'react';
 
-const AudioPlayButton = props => {
+const AudioButton = props => {
     const [isPlaying,
         setIsPlaying] = useState(false);
     const audioRef = useRef(null);
@@ -45,4 +45,4 @@ const AudioPlayButton = props => {
     )
 }
 
-export default AudioPlayButton;
+export default AudioButton;
