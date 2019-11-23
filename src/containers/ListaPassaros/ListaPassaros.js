@@ -25,7 +25,7 @@ const ListaPassaros = (props) => {
             <WOW animation="zoomIn">
                 <PageHeader hasBack={true}>
                     <h2 className="inner-title">
-                        <span>aves presenta na</span>
+                        <span>aves presentes na</span>
                         {pracaNome}
                     </h2>
                 </PageHeader>

@@ -38,7 +38,7 @@ const App = () => {
     ];
 
     return (
-        <BrowserRouter basename="/">
+        <BrowserRouter basename="/projetoaves">
 
             <Layout>
                 {routes.map(({path, Component, name, exact}) => (

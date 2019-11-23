@@ -5,6 +5,7 @@
     "npm": "6.4.1",
     "node": "10.15"
   },
+  "homepage": "http://aplicativoseducacionais.epizy.com/projetoaves/",
   "private": true,
   "dependencies": {
     "@babel/core": "7.5.5",
